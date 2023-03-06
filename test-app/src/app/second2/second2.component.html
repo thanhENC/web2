@@ -1,0 +1,16 @@
+<h3>Product List</h3>
+<div *ngFor="let p of products; index as i; odd as o; even as e">
+  <!-- <p>{{i}} - {{p.name}} - {{p.price}} - {{o}} - {{e}}</p> -->
+  <p>{{p | json}}</p>
+</div>
+
+<hr>
+<div>
+  <!-- <p>Data from App-Component: {{parentData}}</p> -->
+  <!--incase @Input() public parentData: any -->
+
+  <p>Data from App-Component: {{data}}</p>
+  <!--incase @Input("parentData") public data: any -->
+
+  <button (click)="sendData()">Send data to App-Component</button>
+</div>

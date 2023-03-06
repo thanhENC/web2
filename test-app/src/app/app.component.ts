@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'test-app';
+
+  data = "Sample data"
+  dataFromChild: any
 }
