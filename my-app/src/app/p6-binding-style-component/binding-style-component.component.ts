@@ -9,6 +9,9 @@ export class BindingStyleComponentComponent {
   public isError:boolean = false;
   public textStyle={
     color:'darkorange',
-    fontSize:'26px'
+    fontSize:'26px',
+  }
+  public capAllStyle={
+    'text-transform':'uppercase',
   }
 }

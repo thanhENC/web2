@@ -1,3 +1,8 @@
 <p>Practice #6</p>
 
-<h1 style=""></h1>
+<div [style]="capAllStyle">
+<h1 style="color:red">Dinh Van An</h1>
+<h1 [style.color]="isError? 'red':'darkgreen'">Nguyen Gia Hung</h1>
+<h1 [style]="{'color':'purple', 'font-size':'26px'}">Dinh Hoan Hao</h1>
+<h1 [style]="textStyle">Tran Duy Thanh</h1>
+</div>
