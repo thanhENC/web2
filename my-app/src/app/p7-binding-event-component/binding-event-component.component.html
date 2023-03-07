@@ -1,0 +1,24 @@
+<p>Practice #7</p>
+
+<button (click)="onClick($event)">Click me</button>
+Name:
+<input type="text" #myName/>
+<button (click)="onSubmit(myName.value)">Submit</button>
+
+<br/>
+<br/>
+a:
+<input type="number" step="0.1" #a/>
+<br>
+b:
+<input type="number" step="0.1" #b/>
+<br>
+
+<button (click)="calSum(a.value, b.value)">+</button>
+<button (click)="calMinus(a.value, b.value)">-</button>
+<button (click)="calMulti(a.value, b.value)">x</button>
+<button (click)="calDiv(a.value, b.value)">/</button>
+<button (click)="reset(a, b)">Reset</button>
+
+<br/>
+<p>Result: {{result}}</p>
