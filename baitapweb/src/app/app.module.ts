@@ -9,6 +9,7 @@ import { Bai29ExternalApiNganHangDongAComponent } from './bai29-external-api-nga
 import { Bai30FakeProductComponent } from './bai30-fake-product/bai30-fake-product.component';
 import { Bai31FakeProduct2Component } from './bai31-fake-product2/bai31-fake-product2.component';
 import { Bai32CoindeskAPIComponent } from './bai32-coindesk-api/bai32-coindesk-api.component';
+import { Bai33ListPublicAPIsComponent } from './bai33-list-public-apis/bai33-list-public-apis.component';
 
 @NgModule({
   declarations: [
@@ -17,13 +18,14 @@ import { Bai32CoindeskAPIComponent } from './bai32-coindesk-api/bai32-coindesk-a
     Bai29ExternalApiNganHangDongAComponent,
     Bai30FakeProductComponent,
     Bai31FakeProduct2Component,
-    Bai32CoindeskAPIComponent
+    Bai32CoindeskAPIComponent,
+    Bai33ListPublicAPIsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

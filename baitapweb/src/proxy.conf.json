@@ -19,5 +19,12 @@
     "secure": true,
     "changeOrigin": true,
     "logLevel": "debug"
+  },
+  {
+    "context": ["/entries"],
+    "target": "https://api.publicapis.org",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
   }
 ]

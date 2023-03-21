@@ -4,12 +4,14 @@ import { Bai29ExternalApiNganHangDongAComponent } from './bai29-external-api-nga
 import { Bai30FakeProductComponent } from './bai30-fake-product/bai30-fake-product.component';
 import { Bai31FakeProduct2Component } from './bai31-fake-product2/bai31-fake-product2.component';
 import { Bai32CoindeskAPIComponent } from './bai32-coindesk-api/bai32-coindesk-api.component';
+import { Bai33ListPublicAPIsComponent } from './bai33-list-public-apis/bai33-list-public-apis.component';
 
 const routes: Routes = [
   { path: 'bai 29', component: Bai29ExternalApiNganHangDongAComponent},
   { path: 'bai 30', component: Bai30FakeProductComponent},
   { path: 'bai 31', component: Bai31FakeProduct2Component},
-  { path: 'bai 32', component: Bai32CoindeskAPIComponent}
+  { path: 'bai 32', component: Bai32CoindeskAPIComponent},
+  { path: 'bai 33', component: Bai33ListPublicAPIsComponent}
 ];
 
 @NgModule({
@@ -24,5 +26,6 @@ export const RoutingComponent = [
   Bai29ExternalApiNganHangDongAComponent,
   Bai30FakeProductComponent,
   Bai31FakeProduct2Component,
-  Bai32CoindeskAPIComponent
+  Bai32CoindeskAPIComponent,
+  Bai33ListPublicAPIsComponent
 ]
