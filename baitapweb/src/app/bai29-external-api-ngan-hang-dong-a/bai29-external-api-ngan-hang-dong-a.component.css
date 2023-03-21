@@ -1,0 +1,35 @@
+.container {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.title {
+  background-color: black !important;
+  color: white;
+}
+
+td {
+  width: 120px;
+}
+
+tr {
+  padding: 20px;
+}
+
+tbody tr:hover {
+  background-color: rgb(250, 179, 179);
+}
+
+thead tr:nth-child(2) {
+  background-color: rgb(177, 177, 177);
+}
+
+table,
+tr,
+td {
+  border: 1px solid black;
+}
+
+th {
+  padding: 10px;
+}
