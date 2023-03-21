@@ -20,10 +20,6 @@ tbody tr:hover {
   background-color: rgb(250, 179, 179);
 }
 
-thead tr:nth-child(2) {
-  background-color: rgb(177, 177, 177);
-}
-
 table,
 tr,
 td {
