@@ -5,13 +5,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule, RoutingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BooksComponent } from './books/books.component';
+import { BooksComponent } from './bai42-books/books.component';
+import { Bai45BookDetailComponent } from './bai45-book-detail/bai45-book-detail.component';
+import { Bai47BookNewComponent } from './bai47-book-new/bai47-book-new.component';
+import { Bai57FashionComponent } from './bai57-fashion/bai57-fashion.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RoutingComponents,
-    BooksComponent
+    BooksComponent,
+    Bai45BookDetailComponent,
+    Bai47BookNewComponent,
+    Bai57FashionComponent
   ],
   imports: [
     BrowserModule,
