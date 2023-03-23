@@ -9,6 +9,10 @@ import { BooksComponent } from './bai42-books/books.component';
 import { Bai45BookDetailComponent } from './bai45-book-detail/bai45-book-detail.component';
 import { Bai47BookNewComponent } from './bai47-book-new/bai47-book-new.component';
 import { Bai57FashionComponent } from './bai57-fashion/bai57-fashion.component';
+import { Bai58FashionDetailComponent } from './bai58-fashion-detail/bai58-fashion-detail.component';
+import { Bai59FashionNewComponent } from './bai59-fashion-new/bai59-fashion-new.component';
+import { Bai60FashionUpdateComponent } from './bai60-fashion-update/bai60-fashion-update.component';
+import { Bai61FashionDeleteComponent } from './bai61-fashion-delete/bai61-fashion-delete.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { Bai57FashionComponent } from './bai57-fashion/bai57-fashion.component';
     BooksComponent,
     Bai45BookDetailComponent,
     Bai47BookNewComponent,
-    Bai57FashionComponent
+    Bai57FashionComponent,
+    Bai58FashionDetailComponent,
+    Bai59FashionNewComponent,
+    Bai60FashionUpdateComponent,
+    Bai61FashionDeleteComponent
   ],
   imports: [
     BrowserModule,
