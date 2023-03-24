@@ -1,0 +1,25 @@
+<p>bai35-us-data works!</p>
+{{errMessage}}
+<h3 class="text-center bg-dark text-white p-3">US Data</h3>
+<div class="container bg-light">
+  <table class="table">
+    <tr>
+      <th>ID Nation</th>
+      <th>Nation</th>
+      <th>ID Year</th>
+      <th>Year</th>
+      <th>Population</th>
+      <th>Slug Nation</th>
+    </tr>
+    <tbody>
+      <tr *ngFor="let dataitem of data.data">
+        <td>{{dataitem.id_nation}}</td>
+        <td>{{dataitem.nation}}</td>
+        <td>{{dataitem.id_year}}</td>
+        <td>{{dataitem.year}}</td>
+        <td>{{dataitem.population}}</td>
+        <td>{{dataitem.slug_nation}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
