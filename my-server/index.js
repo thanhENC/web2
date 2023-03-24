@@ -5,6 +5,8 @@ const morgan = require('morgan')
 app.use(morgan('combined'))
 const cors = require('cors')
 app.use(cors())
+const bodyParser = require('body-parser')
+app.use(bodyParser.json())
 
 // //lets require/import the mongodb native drivers.
 // var mongodb = require('mongodb');
@@ -26,11 +28,10 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 
+// start server
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
 })
-
-
 
 let database = [
     { "BookId": "b1", "BookName": "Kỹ thuật lập trình cơ bản", "Price": 70, "Image": "b1.png" },
@@ -40,10 +41,12 @@ let database = [
     { "BookId": "b5", "BookName": "Lập trình Robot cơ bản", "Price": 250, "Image": "b5.png" },
 ]
 
+// get all books
 app.get('/books', cors(), (req, res) => {
     res.send(database)
 })
 
+// get all products
 app.get('/products', cors(), (req, res) => {
     res.send([
         { productCode: 1, productName: 'Heineken', productPrice: 19000 },
@@ -52,3 +55,22 @@ app.get('/products', cors(), (req, res) => {
     ])
 })
 
+// get book by id
+app.get('/books/:id', cors(), (req, res) => {
+    id = req.params['id']
+    let p = database.find(x => x.BookId == id)
+    res.send(p)
+})
+
+// post book
+app.post('/books', cors(), (req, res) => {
+    // // test post data
+    // console.log(req.body)
+    // res.send('Server received your data, Your data:' + req.body)
+
+    // add new book
+    // put json book into database
+    database.push(req.body)
+    // send message to client(send all database to client)
+    res.send(database)
+})
