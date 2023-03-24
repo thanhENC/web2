@@ -9,7 +9,6 @@ import { UsDataService } from '../services/us-data.service';
 })
 export class Bai35UsDataComponent {
   data: any
-  usdataitem = new USData()
   errMessage: string = ''
 
   constructor(private _service: UsDataService) {
