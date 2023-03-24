@@ -1,0 +1,8 @@
+<p>bai36-random-dog-image works!</p>
+{{errMessage}}
+<h3 class="text-center bg-dark text-white p-3">Random Dog Image</h3>
+
+<div class="container bg-light">
+  <img [src]="dogimage.message" alt="dog image" class="img-fluid">
+  <button class="btn btn-primary" (click)="getRandomDog()">Random</button>
+</div>
