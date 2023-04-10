@@ -33,6 +33,8 @@ export class FashionComponent {
     this._router.navigate(['/fashions/detail', fashionId])
   }
 
+  
+
   deleteFashion(fashionId: string) {
     // confirm delete
     if (confirm("Are you sure to delete this fashion?")) {
