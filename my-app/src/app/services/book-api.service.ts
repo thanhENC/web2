@@ -10,6 +10,25 @@ export class BookAPIService {
 
   constructor(private _http: HttpClient) { }
 
+  // get books in range of price min:max
+  getBooksInRange(min:number, max:number): Observable<any>{
+    const headers = new HttpHeaders().set(
+      'Content-Type',
+      'text/plain;charset=utf-8'
+    )
+
+    const requestOptions: Object = {
+      headers: headers,
+      responseType: 'text',
+    }
+
+    return this._http.get<any>('books/'+min+'/'+max, requestOptions).pipe(
+      map((res) => JSON.parse(res) as Array<IBook>),
+      retry(3),
+      catchError(this.handleError)
+    )
+  }
+
   // get all books
   getBooks(): Observable<any>{
     const headers = new HttpHeaders().set(

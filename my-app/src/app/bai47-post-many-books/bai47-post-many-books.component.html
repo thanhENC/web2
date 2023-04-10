@@ -1,0 +1,86 @@
+<p>bai47-Post many books</p>
+<p>{{errMessage}}</p>
+
+<div class="container bg-light p-3">
+  <table class="table">
+    <tr>
+      <td>Book Id:</td>
+      <td>
+        <input type="text" class="form-control" #name="ngModel" name="BookId" placeholder="Nhập Book Id"
+          [(ngModel)]="book.BookId" />
+      </td>
+    </tr>
+    <tr>
+      <td>Book Name:</td>
+      <td>
+        <input type="text" class="form-control" #name="ngModel" name="BookName" placeholder="Nhập Book Name"
+          [(ngModel)]="book.BookName" />
+      </td>
+    </tr>
+    <tr>
+      <td>Price:</td>
+      <td>
+        <input type="number" class="form-control" #name="ngModel" name="Price" placeholder="Nhập Price"
+          [(ngModel)]="book.Price" />
+      </td>
+    </tr>
+    <tr>
+      <td>Image:</td>
+      <td>
+        <input type="text" class="form-control" #name="ngModel" name="Image" placeholder="Nhập Image"
+          [(ngModel)]="book.Image" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button class="btn btn-dark active" (click)="addBookToWaitingList(book)">Add Book To Waiting List</button>
+      </td>
+      <td>
+        <button class="btn btn-primary w-100 my-2 active rounded-4" (click)="postBook()">Submit</button>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<!-- Waiting List -->
+<div class="container">
+  <h4 class="text-center">Waiting List</h4>
+  <table class="table" border="1">
+    <tr class="bg-info">
+      <th>Book Id</th>
+      <th>Book Name</th>
+      <th>Price</th>
+      <th>Image</th>
+    </tr>
+    <tr *ngFor="let b of newBooks">
+      <td>{{b.BookId}}</td>
+      <td>{{b.BookName}}</td>
+      <td>{{b.Price}}</td>
+      <td>
+        <img src="assets/book_images/{{book.Image}}" alt="book image" width="50px" height="50px">
+      </td>
+    </tr>
+  </table>
+</div>
+
+<hr>
+<h4 class="text-center">List of Books</h4>
+<!-- <div app-books></div> -->
+<div class="container">
+  <table class="table" border="1">
+    <tr class="bg-info">
+      <th>Book Id</th>
+      <th>Book Name</th>
+      <th>Price</th>
+      <th>Image</th>
+    </tr>
+    <tr *ngFor="let b of books">
+      <td>{{b.BookId}}</td>
+      <td>{{b.BookName}}</td>
+      <td>{{b.Price}}</td>
+      <td>
+        <img src="assets/book_images/{{book.Image}}" alt="book image" width="50px" height="50px">
+      </td>
+    </tr>
+  </table>
+</div>
