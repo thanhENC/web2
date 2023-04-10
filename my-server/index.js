@@ -70,7 +70,22 @@ app.post('/books', cors(), (req, res) => {
 
     // add new book
     // put json book into database
-    database.push(req.body)
+    // database.push(req.body)
+
+    // add new many books at once
+    database.push(...req.body)
+
     // send message to client(send all database to client)
     res.send(database)
+})
+
+// filter book by price in a range min:max
+app.get('/books/:minprice/:maxprice', cors(), (req, res) => {
+    try {
+        let p = database.filter(x => x.Price >= req.params['minprice'] && x.Price <= req.params['maxprice'])
+        res.send(p)
+    }
+    catch {
+        res.send('Error')
+    }
 })
